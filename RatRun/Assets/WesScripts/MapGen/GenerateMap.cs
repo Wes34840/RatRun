@@ -10,13 +10,14 @@ public class GenerateMap : MonoBehaviour
     
     private void Start()
     {
-        var screenWidth = Camera.main.orthographicSize * 2.0 * Screen.width / Screen.height / 19.2;
+        var screenWidth = Camera.main.orthographicSize * 2.0 * Screen.width / Screen.height / 16;
         var screenHeight = Camera.main.orthographicSize * 2.0;
-        var laneHeight = screenHeight / 12;
+        var laneHeight = screenHeight / lanes.Length;
 
         LaneType[] mapLayout = new LaneType[]
         {
                 LaneType.Grass,
+                LaneType.Road,
                 LaneType.Road,
                 LaneType.Road,
                 LaneType.Road,
@@ -39,7 +40,6 @@ public class GenerateMap : MonoBehaviour
 
             RenderLane(lanes[i]);
 
-            lanes[i].transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y / 1.2f, 0);
         }
     }
     private void RenderLane(GameObject lane)
