@@ -4,35 +4,34 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float MovementSpeed = 125f;
-
-
-    // Start is called before the first frame update
-    void Start()
+    private float MovementSpeed;
+    
+    private void Start()
     {
-        
+        MovementSpeed = Camera.main.orthographicSize * 2 / 12;
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
-            transform.position += transform.up * MovementSpeed * Time.deltaTime;
+            transform.position = new Vector2(transform.position.x, transform.position.y + MovementSpeed);
         }
 
-        if(Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)){
-            transform.position += transform.right * MovementSpeed * Time.deltaTime;
+        if(Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            transform.position = new Vector2(transform.position.x + MovementSpeed, transform.position.y);
         }
 
         if(Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
-            transform.position -= transform.up * MovementSpeed * Time.deltaTime;
+            transform.position = new Vector2(transform.position.x, transform.position.y - MovementSpeed);
         }
 
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            transform.position -= transform.right * MovementSpeed * Time.deltaTime;
+            transform.position = new Vector2(transform.position.x - MovementSpeed, transform.position.y);
         }
     }
 }

@@ -157,6 +157,7 @@ MonoBehaviour:
   - {fileID: 266972898, guid: 4ccf19b7bd07fc042a161f23bbc2c926, type: 3}
   - {fileID: 1481340060, guid: 5a7aae957e6c4104ab39703f54c8899b, type: 3}
   lanePrefab: {fileID: 2215580688570790945, guid: 22dfd42f7f533cb4fb94b8e1019cdeaf, type: 3}
+  playerPrefab: {fileID: 7842015595995425336, guid: 238efcbb70880764e9cde62f2326eb71, type: 3}
 --- !u!4 &834577330
 Transform:
   m_ObjectHideFlags: 0
