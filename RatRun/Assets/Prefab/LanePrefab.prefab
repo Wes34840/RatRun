@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2215580688570790959}
   - component: {fileID: 2215580688570790944}
   - component: {fileID: 2793506770758494646}
+  - component: {fileID: -4029425323665223798}
   m_Layer: 0
   m_Name: LanePrefab
   m_TagString: Untagged
@@ -97,3 +98,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f37c7e9bb6ae46f468c6ef00e00c2a77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-4029425323665223798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2215580688570790945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a595dd10df29bf74cac5929a75e7001e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawner: {fileID: 6423658568177268854, guid: edfa696607da51846a31c6a38a2eae09, type: 3}
