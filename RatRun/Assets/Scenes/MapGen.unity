@@ -152,6 +152,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdb26f3248200b045a495f15a3f42063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  laneSprites:
+  - {fileID: -879967447, guid: 6d2c94f23debe254982d6276fd0b7f16, type: 3}
+  - {fileID: 21300000, guid: 0ed9e1dac3112204ab0276aeb50c7faf, type: 3}
+  - {fileID: 21300000, guid: f0aa8cb7793923042ab41c3d207c2c07, type: 3}
   lanePrefab: {fileID: 2215580688570790945, guid: 22dfd42f7f533cb4fb94b8e1019cdeaf, type: 3}
 --- !u!4 &834577330
 Transform:
