@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -44,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         MovementTick();
-
+        Debug.Log(currentLane);
         if (currentLane >= 7 && currentLane <= 10)
         {
             DrownCheck();
@@ -55,23 +56,45 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
+            float nextLane = currentLane+1;
+            if (nextLane > 11)
+            {
+                return;
+            }
             transform.position = new Vector2(transform.position.x, transform.position.y + MovementSpeed);
             currentLane++;
         }
 
         if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
         {
+            Vector2 nextPos = transform.position;
+            if (nextPos.x > Camera.main.orthographicSize * Screen.width / Screen.height / 16)
+            {
+                return;
+            }
             transform.position = new Vector2(transform.position.x + (MovementSpeed / 2), transform.position.y);
         }
 
         if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
+            float nextLane = currentLane-1;
+            if (nextLane < 0)
+            {
+                return;
+            }
+
             transform.position = new Vector2(transform.position.x, transform.position.y - MovementSpeed);
             currentLane--;
+            
         }
 
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
+            Vector2 nextPos = transform.position;
+            if (nextPos.x < Camera.main.orthographicSize * Screen.width / Screen.height / 16)
+            {
+                return;
+            }
             transform.position = new Vector2(transform.position.x - (MovementSpeed / 2), transform.position.y);
         }
     }
