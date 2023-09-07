@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &834577328
+--- !u!1 &210340529
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,50 +131,44 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 834577330}
-  - component: {fileID: 834577329}
+  - component: {fileID: 210340531}
+  - component: {fileID: 210340530}
   m_Layer: 0
-  m_Name: GenerateMap
+  m_Name: lane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &834577329
+--- !u!114 &210340530
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 834577328}
+  m_GameObject: {fileID: 210340529}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdb26f3248200b045a495f15a3f42063, type: 3}
+  m_Script: {fileID: 11500000, guid: a595dd10df29bf74cac5929a75e7001e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laneSprites:
-  - {fileID: -1894181899, guid: 231e12a094a72c942bd58b63a810cd1d, type: 3}
-  - {fileID: 266972898, guid: 4ccf19b7bd07fc042a161f23bbc2c926, type: 3}
-  - {fileID: 1481340060, guid: 5a7aae957e6c4104ab39703f54c8899b, type: 3}
-  - {fileID: 21300000, guid: d0541e0df132dab47ab34bbda8a83ed2, type: 3}
-  lanePrefab: {fileID: 2215580688570790945, guid: 22dfd42f7f533cb4fb94b8e1019cdeaf, type: 3}
-  playerPrefab: {fileID: 7842015595995425336, guid: 238efcbb70880764e9cde62f2326eb71, type: 3}
---- !u!4 &834577330
+  spawner: {fileID: 6423658568177268854, guid: edfa696607da51846a31c6a38a2eae09, type: 3}
+--- !u!4 &210340531
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 834577328}
+  m_GameObject: {fileID: 210340529}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.28533038, y: -0.30491093, z: 0.047445692}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1926602490
+--- !u!1 &1290024133
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -182,9 +176,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1926602493}
-  - component: {fileID: 1926602492}
-  - component: {fileID: 1926602491}
+  - component: {fileID: 1290024136}
+  - component: {fileID: 1290024135}
+  - component: {fileID: 1290024134}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -192,25 +186,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1926602491
+--- !u!81 &1290024134
 AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1926602490}
+  m_GameObject: {fileID: 1290024133}
   m_Enabled: 1
---- !u!20 &1926602492
+--- !u!20 &1290024135
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1926602490}
+  m_GameObject: {fileID: 1290024133}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.8584906, g: 0.8584906, b: 0.8584906, a: 0}
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -243,13 +237,13 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!4 &1926602493
+--- !u!4 &1290024136
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1926602490}
+  m_GameObject: {fileID: 1290024133}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}

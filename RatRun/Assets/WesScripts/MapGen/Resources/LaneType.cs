@@ -6,5 +6,6 @@ public enum LaneType
 {
     Grass,
     Road,
-    Water
+    Water,
+    TopBar
 }
