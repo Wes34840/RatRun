@@ -6,7 +6,6 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private float MovementSpeed;
-    internal LaneType type;
     SpriteRenderer sr;
     public Sprite newSprite;
     private PlayerMovement pm;
@@ -25,10 +24,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D target)
     {
-        if (type == LaneType.Water && target.gameObject.tag != "Log" )
+        if (target.gameObject.GetComponent<Lane>().type == LaneType.Water && target.gameObject.tag != "Log" )
         { 
             pm.enabled= false;
             ChangeSprite(newSprite);
+            
         }
 
     }

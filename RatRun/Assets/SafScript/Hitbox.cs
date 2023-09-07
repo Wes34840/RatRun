@@ -20,10 +20,11 @@ public class Hitbox : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D target)
     {
-        if(target.gameObject.tag == "Car")
+        if(target.gameObject.tag == "car")
         {
             ChangeSprite(newSprite);
             pm.enabled= false;
+            Debug.Log("Low Tier God'd");
         }
         
     }
