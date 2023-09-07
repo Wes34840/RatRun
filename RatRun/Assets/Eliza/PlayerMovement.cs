@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,13 +6,33 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private float MovementSpeed;
-    
+    internal LaneType type;
+    SpriteRenderer sr;
+    public Sprite newSprite;
+    private PlayerMovement pm;
     private void Start()
     {
         MovementSpeed = Camera.main.orthographicSize * 2 / 12;
+        sr = GetComponent<SpriteRenderer>();
+        pm = GetComponent<PlayerMovement>();
+
     }
 
-    // Update is called once per frame
+
+    private void OnCollisionStay2D(Collision2D target)
+    {
+        if (type == LaneType.Water && target.gameObject.tag != "Log" )
+        { 
+            pm.enabled= false;
+            ChangeSprite(newSprite);
+        }
+
+    }
+    
+    private void ChangeSprite(Sprite newSprite)
+    {
+        sr.sprite = newSprite;
+    }
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
