@@ -47,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
     {
         MovementTick();
 
-        if (currentLane >= 7 && currentLane <= 11)
+        if (currentLane >= 7 && currentLane <= 10)
         {
             Debug.Log("DrownCheck");
             DrownCheck();
