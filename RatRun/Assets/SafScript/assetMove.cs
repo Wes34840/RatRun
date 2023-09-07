@@ -10,6 +10,7 @@ public class assetMove : MonoBehaviour
     [SerializeField] internal float minDelayTime;
     [SerializeField] internal float maxDelayTime;
     [SerializeField] internal float respawnTime;
+    [SerializeField] private float despawnTime;
     void Start()
     {
         player = GameObject.Find("Rat(Clone)");
@@ -23,6 +24,7 @@ public class assetMove : MonoBehaviour
             dir = 1;
         }
         speed = speed / 100;
+        Destroy(gameObject, despawnTime);
     }
 
     // Update is called once per frame

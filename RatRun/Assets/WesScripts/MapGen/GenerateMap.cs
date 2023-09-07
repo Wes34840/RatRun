@@ -43,6 +43,18 @@ public class GenerateMap : MonoBehaviour
 
             RenderLane(lanes[i]);
 
+            float direction;
+
+            direction = Random.Range(0, 2) * 2 - 1;
+
+            if (i >= 8)
+            {
+                direction = lanes[i - 1].GetComponent<Lane>().dirValue * -1;
+                Debug.Log(direction);
+            }
+
+            lanes[i].GetComponent<SpawnScript>().InitSpawns(direction);
+            lanes[i].GetComponent<Lane>().dirValue = direction;
         }
 
         Instantiate(playerPrefab, new Vector3(0, -Camera.main.orthographicSize + (laneHeight / 2), 0), Quaternion.identity);

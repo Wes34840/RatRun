@@ -5,4 +5,5 @@ using UnityEngine;
 public class Lane : MonoBehaviour
 {
     internal LaneType type;
+    internal float dirValue;
 }
