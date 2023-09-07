@@ -28,6 +28,7 @@ public class Hitbox : MonoBehaviour
 
         if (collision.gameObject.tag == "car")
         {
+            Debug.Log("hit by car");
             Die("Roadkill");
         }
     }

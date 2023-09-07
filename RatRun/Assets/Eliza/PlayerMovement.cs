@@ -8,7 +8,6 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     SpriteRenderer sr;
-    public Sprite newSprite;
     private PlayerMovement pm;
     private Collider2D coll;
 
@@ -29,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "log")
         {
-            Debug.Log("entered log");
+            
             isOnWater = false;
             drownTime = 0.1;
         }
@@ -39,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "log")
         {
-            Debug.Log("exited log");
+            
             isOnWater = true;
         }
     }
@@ -49,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (currentLane >= 7 && currentLane <= 10)
         {
-            Debug.Log("DrownCheck");
+           
             DrownCheck();
         }
     }

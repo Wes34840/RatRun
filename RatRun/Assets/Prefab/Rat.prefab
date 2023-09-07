@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6140357806390833248}
   - component: {fileID: 4434340907201395511}
   - component: {fileID: -68427153752457869}
+  - component: {fileID: 5366797625422412031}
   m_Layer: 0
   m_Name: Rat
   m_TagString: Untagged
@@ -101,7 +102,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 639ba107558218541aa608db00ed7902, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newSprite: {fileID: 21300000, guid: ff00345da0563d641903c5bd5bb748a4, type: 3}
 --- !u!114 &-5940099597241226358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,7 +116,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   splat: {fileID: 8300000, guid: 6d1440647cc41214e9689bfa118ada47, type: 3}
   splash: {fileID: 8300000, guid: 1ef00649ffd61224cbfa86ed29698243, type: 3}
-  deathSprites: []
+  deathSprites:
+  - {fileID: 21300000, guid: 76beef9fdae7b48468ddf07d0400a374, type: 3}
+  - {fileID: 21300000, guid: 0779ad3feec52124e97114bcbb12ef13, type: 3}
 --- !u!61 &6140357806390833248
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -127,7 +129,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -163,7 +165,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: cd1724eb6204385459c2b66c3d7fc2e2, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.12
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -247,3 +249,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!50 &5366797625422412031
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7842015595995425336}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
