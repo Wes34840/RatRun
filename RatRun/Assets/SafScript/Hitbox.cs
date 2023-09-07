@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class Hitbox : MonoBehaviour
 {
     BoxCollider2D hitbox;
     SpriteRenderer sr;
-    public Sprite newSprite;
+    [SerializeField] private Sprite[] deathSprites;
     internal PlayerMovement pm;
     void Start()
     {
@@ -17,20 +19,25 @@ public class Hitbox : MonoBehaviour
 
     // Update is called once per frame
    
-
-    private void OnCollisionEnter2D(Collision2D target)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(target.gameObject.tag == "car")
+
+        if (collision.gameObject.tag == "car")
         {
-            ChangeSprite(newSprite);
-            pm.enabled= false;
-            Debug.Log("Low Tier God'd");
+            Die("Roadkill");
         }
-        
     }
-
-    private void ChangeSprite(Sprite newSprite)
+    internal void Die(string type)
     {
-        sr.sprite = newSprite;
+        switch (type)
+        {
+            case "Drowning":
+                sr.sprite = deathSprites[0];
+                break;
+            case "Roadkill":
+                sr.sprite = deathSprites[1];
+                break;
+        }
+        pm.enabled = false;
     }
 }

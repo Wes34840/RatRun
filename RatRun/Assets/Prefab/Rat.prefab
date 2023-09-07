@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -1522654998672685468}
   - component: {fileID: -5940099597241226358}
   - component: {fileID: 6140357806390833248}
+  - component: {fileID: 761424651294429249}
   m_Layer: 0
   m_Name: Rat
   m_TagString: Untagged
@@ -112,7 +113,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ede3d0000f6b8eb438aafd0d5d0f8b6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newSprite: {fileID: 21300000, guid: daf2ab606d4db0d4f9ecf4c02137d2a8, type: 3}
+  deathSprites:
+  - {fileID: 21300000, guid: c7aa62ae78ffca0498c89e5f45f94c0e, type: 3}
+  - {fileID: 21300000, guid: 68e5a78013e33f247822a837e55b0ab4, type: 3}
 --- !u!61 &6140357806390833248
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -123,7 +126,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -139,3 +142,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.14, y: 0.31}
   m_EdgeRadius: 0
+--- !u!50 &761424651294429249
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7842015595995425336}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
