@@ -7,6 +7,9 @@ using static UnityEngine.GraphicsBuffer;
 public class Hitbox : MonoBehaviour
 {
     BoxCollider2D hitbox;
+    public AudioClip splat;
+    public AudioClip splash;
+    private AudioSource source;
     SpriteRenderer sr;
     [SerializeField] private Sprite[] deathSprites;
     internal PlayerMovement pm;
@@ -15,6 +18,7 @@ public class Hitbox : MonoBehaviour
         hitbox= GetComponent<BoxCollider2D>();
         sr= GetComponent<SpriteRenderer>();
         pm= GetComponent<PlayerMovement>();
+        source= GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -33,9 +37,12 @@ public class Hitbox : MonoBehaviour
         {
             case "Drowning":
                 sr.sprite = deathSprites[0];
+                source.PlayOneShot(splash, 1f);
                 break;
+
             case "Roadkill":
                 sr.sprite = deathSprites[1];
+                source.PlayOneShot(splat, 1f);
                 break;
         }
         pm.enabled = false;
