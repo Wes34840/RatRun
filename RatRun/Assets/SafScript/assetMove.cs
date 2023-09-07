@@ -7,8 +7,9 @@ public class assetMove : MonoBehaviour
     [SerializeField] private GameObject player;
     private float dir;
     public float speed;
-    [SerializeField] internal float minRespawnTime;
-    [SerializeField] internal float maxRespawnTime;
+    [SerializeField] internal float minDelayTime;
+    [SerializeField] internal float maxDelayTime;
+    [SerializeField] internal float respawnTime;
     void Start()
     {
         player = GameObject.Find("Rat(Clone)");

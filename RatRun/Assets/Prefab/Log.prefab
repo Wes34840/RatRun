@@ -99,5 +99,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   speed: 0.5
-  minRespawnTime: 3
-  maxRespawnTime: 5
+  minDelayTime: 0
+  maxDelayTime: 2.5
+  respawnTime: 3

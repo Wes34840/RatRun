@@ -8,6 +8,7 @@ public class SpawnAsset : MonoBehaviour
     public GameObject[] spawns;
     int chosen;
     float timer, timerDelay;
+    private assetMove assetScript;
     void Start()
     {
         switch (type)
@@ -20,8 +21,8 @@ public class SpawnAsset : MonoBehaviour
                 break;
 
         }
-        assetMove assetScript = spawns[chosen].GetComponent<assetMove>();
-        timerDelay = Random.Range(assetScript.minRespawnTime * 10, assetScript.maxRespawnTime * 10)/10;
+        assetScript = spawns[chosen].GetComponent<assetMove>();
+        timerDelay = Random.Range(assetScript.minDelayTime * 10, assetScript.maxDelayTime * 10)/10;
         timer = timerDelay;
     }
 
@@ -31,7 +32,7 @@ public class SpawnAsset : MonoBehaviour
         timer -= Time.deltaTime;
         if (timer <= 0)
         {
-            timer = 4;
+            timer = assetScript.respawnTime;
             Instantiate(spawns[chosen], transform.position, Quaternion.identity);
         }
     }
