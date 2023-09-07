@@ -6,7 +6,7 @@ public class GenerateMap : MonoBehaviour
 {
     [SerializeField] private Sprite[] laneSprites;
     [SerializeField] private GameObject lanePrefab;
-    private GameObject[] lanes = new GameObject[12];
+    private GameObject[] lanes = new GameObject[13];
 
     [SerializeField] private GameObject playerPrefab;
 
@@ -29,7 +29,8 @@ public class GenerateMap : MonoBehaviour
                 LaneType.Water,
                 LaneType.Water,
                 LaneType.Water,
-                LaneType.Grass
+                LaneType.Grass,
+                LaneType.TopBar
         }; //bandaid fix because busy with fixing sprites
 
         for (int i = 0; i < lanes.Length; i++)
@@ -50,5 +51,9 @@ public class GenerateMap : MonoBehaviour
     {
         SpriteRenderer render = lane.GetComponent<SpriteRenderer>();
         render.sprite = laneSprites[(int)lane.GetComponent<Lane>().type];
+        if (lane.GetComponent<Lane>().type == LaneType.TopBar)
+        {
+            render.sortingOrder = 5; 
+        }
     }
 }

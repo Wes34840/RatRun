@@ -12,9 +12,13 @@ public class PlayerMovement : MonoBehaviour
     private PlayerMovement pm;
     private void Start()
     {
-        MovementSpeed = Camera.main.orthographicSize * 2 / 12;
+
+       
         sr = GetComponent<SpriteRenderer>();
         pm = GetComponent<PlayerMovement>();
+
+
+        MovementSpeed = Camera.main.orthographicSize * 2 / 13;
 
     }
 
@@ -42,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
         {
-            transform.position = new Vector2(transform.position.x + MovementSpeed, transform.position.y);
+            transform.position = new Vector2(transform.position.x + (MovementSpeed / 2), transform.position.y);
         }
 
         if(Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
@@ -52,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            transform.position = new Vector2(transform.position.x - MovementSpeed, transform.position.y);
+            transform.position = new Vector2(transform.position.x - (MovementSpeed / 2), transform.position.y);
         }
     }
 }
