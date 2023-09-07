@@ -9,7 +9,6 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     SpriteRenderer sr;
-    public Sprite newSprite;
     private PlayerMovement pm;
     private Collider2D coll;
 
