@@ -49,6 +49,10 @@ public class PlayerMovement : MonoBehaviour
         {
             DrownCheck();
         }
+        if (currentLane == 11)
+        {
+            // finish level
+        }
     }
 
     private void MovementTick()

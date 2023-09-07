@@ -7,21 +7,12 @@ using UnityEngine;
 
 public class Scoresystem : MonoBehaviour
 {
-    // Start is called before the first frame update
-    
-    void Start()
+    private bool hasTriggered = false;
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-
-
-    }
-
-    // Update is called once per frame
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        Debug.Log("yes");
-        if (other.name == "line");
+        if (collision.CompareTag("rat") && !hasTriggered)
         {
-            other.GetComponent<points>().Points++;
+            GlobalData.playerPoints++;
             Destroy(gameObject);
         }
     }

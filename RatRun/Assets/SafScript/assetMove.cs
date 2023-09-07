@@ -30,6 +30,6 @@ public class assetMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector2(transform.position.x + (speed * dir), transform.position.y);
+        transform.position = new Vector2(transform.position.x + (speed * dir) * Time.deltaTime, transform.position.y);
     }
 }

@@ -6,6 +6,6 @@ public class SetScreen : MonoBehaviour
 {
     void Start()
     {
-        Screen.SetResolution((Screen.height / 16 * 9), Screen.height, FullScreenMode.MaximizedWindow);
+        Screen.SetResolution(Screen.width, Screen.width / 4 * 3, FullScreenMode.MaximizedWindow);
     }
 }

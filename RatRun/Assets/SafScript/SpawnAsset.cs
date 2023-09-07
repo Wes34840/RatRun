@@ -17,7 +17,7 @@ public class SpawnAsset : MonoBehaviour
                 chosen = 0;
                 break;
             case LaneType.Road:
-                chosen = Random.Range(1, spawns.Length - 1);
+                chosen = Random.Range(1, spawns.Length);
                 break;
 
         }
