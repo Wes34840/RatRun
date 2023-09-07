@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 99907370074690704}
   - component: {fileID: -5206100029910162507}
   m_Layer: 0
-  m_Name: car
+  m_Name: car 2
   m_TagString: car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: -419482737, guid: fa5bfc0a84ee2244185bb1669fd58eab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3d8d717d21812f143b89376752192203, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -118,18 +118,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.03478816, y: 0.016234487}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.21, y: 0.39}
+    oldSize: {x: 2, y: 1}
     newSize: {x: 1.21, y: 0.39}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.21, y: 0.39}
+  m_Size: {x: 0.95488685, y: 0.357531}
   m_EdgeRadius: 0
 --- !u!50 &-5206100029910162507
 Rigidbody2D:

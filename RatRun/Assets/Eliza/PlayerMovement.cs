@@ -68,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
         {
             Vector2 nextPos = transform.position;
-            if (nextPos.x > Camera.main.orthographicSize * Screen.width / Screen.height / 16)
+            if (nextPos.x > Camera.main.orthographicSize)
             {
                 return;
             }
@@ -91,7 +91,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             Vector2 nextPos = transform.position;
-            if (nextPos.x < Camera.main.orthographicSize * Screen.width / Screen.height / 16)
+            if (nextPos.x < Camera.main.orthographicSize*-1)
             {
                 return;
             }
