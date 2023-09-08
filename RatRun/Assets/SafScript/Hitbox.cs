@@ -52,6 +52,7 @@ public class Hitbox : MonoBehaviour
                 break;
         }
         pm.enabled = false;
+
     }
     async private void OpenScene()
     {

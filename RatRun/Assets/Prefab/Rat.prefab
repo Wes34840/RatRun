@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6084781386085493874}
   - component: {fileID: -1522654998672685468}
   - component: {fileID: -5940099597241226358}
+  - component: {fileID: 5882944328230341483}
   - component: {fileID: 6140357806390833248}
   - component: {fileID: 4434340907201395511}
   - component: {fileID: -68427153752457869}
@@ -119,6 +120,18 @@ MonoBehaviour:
   deathSprites:
   - {fileID: 21300000, guid: 98bbabedad1950340a55c8b9994373ea, type: 3}
   - {fileID: 21300000, guid: 0c144f7133991fb4dbc5568779afb855, type: 3}
+--- !u!114 &5882944328230341483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7842015595995425336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1501f154e31dd0642b2aa551067bd904, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &6140357806390833248
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -5,4 +5,5 @@ using UnityEngine;
 public class GlobalData
 {
     internal static float playerPoints;
+    internal static float highScore;
 }

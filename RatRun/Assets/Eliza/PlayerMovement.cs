@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private int currentLane = 0;
     private bool isOnWater = true;
     private double drownTime = 0.1;
+    private bool hasEnded = false;
     private void Start()
     {
         coll = GetComponent<Collider2D>();
@@ -49,9 +50,10 @@ public class PlayerMovement : MonoBehaviour
         {
             DrownCheck();
         }
-        if (currentLane == 11)
+        if (currentLane == 11 && !hasEnded)
         {
-            // finish level
+            GlobalData.playerPoints += 10;
+            GetComponent<TriggerNextMap>().NewScene();
         }
     }
 

@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 59100
+  controlID: 78
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 59101
+  controlID: 79
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 59011
+  controlID: 17
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,9 +224,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: ca610000
       m_LastClickedID: 0
-      m_ExpandedIDs: 5c9bfbff9047fdffcc48fdff1a49fdff6a49fdff144afdff8059fdffa6dffdff04e0fdff46f2fdff2afbffff0a91000020910000
+      m_ExpandedIDs: 207bffff2c83ffff0a9cffff64aaffff6cacffffe2c9ffff7cf8fffff8f9ffff2afbfffff4610000507b0000227c0000208300002a8300008a850000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -523,9 +523,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.668519, y: -1.858303, z: 65.43209}
+    m_Target: {x: 0.030742936, y: -0.412022, z: 68.88405}
     speed: 2
-    m_Value: {x: 1.668519, y: -1.858303, z: 65.43209}
+    m_Value: {x: 0.030742936, y: -0.412022, z: 68.88405}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -576,9 +576,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 5.5423856
+    m_Target: 5.785101
     speed: 2
-    m_Value: 5.5423856
+    m_Value: 5.785101
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -627,7 +627,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 59102
+  controlID: 80
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -696,36 +696,36 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/WesScripts/WaitForObstacles
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/WesScripts/WaitForObstacles
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\sbroe\Documents\Ma\bewijzenmap\module5\GameJam Start\RatRun\RatRun
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 87}
-    m_SelectedIDs: 049a0000
-    m_LastClickedID: 39428
-    m_ExpandedIDs: 0000000016600000186000001a6000001c6000001e6000002060000022600000386000004260000000ca9a3b
+    scrollPos: {x: 0, y: 63}
+    m_SelectedIDs: 6c610000
+    m_LastClickedID: 24940
+    m_ExpandedIDs: 000000003461000036610000386100003a6100003c6100003e61000040610000426100006c61000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: New Folder
-      m_OriginalName: New Folder
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 38476
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_SearchString: 
@@ -739,7 +739,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000016600000186000001a6000001c6000001e6000002060000022600000386000004260000000ca9a3b
+    m_ExpandedIDs: 000000003461000036610000386100003a6100003c6100003e610000406100004261000044610000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -764,10 +764,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: ca610000
+    m_LastClickedInstanceID: 25034
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000647900006e790000426000006a790000905e0000945e0000985e000074780000947b0000987b00009c7b0000da7700000a840000168400000e84000006840000fe830000
+    m_ExpandedInstanceIDs: c6230000647900006e790000426000006a790000905e0000945e0000985e000074780000947b0000987b00009c7b0000da7700000a840000168400000e84000006840000fe830000ce610000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
