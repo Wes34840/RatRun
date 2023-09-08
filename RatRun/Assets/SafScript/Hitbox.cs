@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using static UnityEngine.GraphicsBuffer;
 
 public class Hitbox : MonoBehaviour
@@ -31,20 +33,31 @@ public class Hitbox : MonoBehaviour
             Die("Roadkill");
         }
     }
-    internal void Die(string type)
+    internal async void Die(string type)
     {
         switch (type)
         {
             case "Drowning":
                 sr.sprite = deathSprites[0];
                 source.PlayOneShot(splash, 1f);
+                OpenScene();
+                
                 break;
 
             case "Roadkill":
                 sr.sprite = deathSprites[1];
                 source.PlayOneShot(splat, 1f);
+                OpenScene();
+      
                 break;
         }
         pm.enabled = false;
     }
+    async private void OpenScene()
+    {
+        await Task.Delay(3000);
+        SceneManager.LoadScene(sceneName: "MainMenu");
+
+    }
+
 }
