@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -28,7 +29,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "log")
         {
-            
             isOnWater = false;
             drownTime = 0.1;
         }
@@ -38,18 +38,20 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "log")
         {
-            
             isOnWater = true;
         }
     }
     private void Update()
     {
         MovementTick();
-
+        Debug.Log(currentLane);
         if (currentLane >= 7 && currentLane <= 10)
         {
-           
             DrownCheck();
+        }
+        if (currentLane == 11)
+        {
+            // finish level
         }
     }
 
@@ -57,23 +59,45 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
+            float nextLane = currentLane+1;
+            if (nextLane > 11)
+            {
+                return;
+            }
             transform.position = new Vector2(transform.position.x, transform.position.y + MovementSpeed);
             currentLane++;
         }
 
         if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
         {
+            Vector2 nextPos = transform.position;
+            if (nextPos.x > Camera.main.orthographicSize)
+            {
+                return;
+            }
             transform.position = new Vector2(transform.position.x + (MovementSpeed / 2), transform.position.y);
         }
 
         if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
+            float nextLane = currentLane-1;
+            if (nextLane < 0)
+            {
+                return;
+            }
+
             transform.position = new Vector2(transform.position.x, transform.position.y - MovementSpeed);
             currentLane--;
+            
         }
 
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
+            Vector2 nextPos = transform.position;
+            if (nextPos.x < Camera.main.orthographicSize*-1)
+            {
+                return;
+            }
             transform.position = new Vector2(transform.position.x - (MovementSpeed / 2), transform.position.y);
         }
     }
